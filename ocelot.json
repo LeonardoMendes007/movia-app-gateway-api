@@ -1,0 +1,301 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/auth/register",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/api/auth/register",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8080
+        }
+      ],
+      "SwaggerKey": "auth-api"
+    },
+    {
+      "DownstreamPathTemplate": "/api/auth/login",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/api/auth/login",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8080
+        }
+      ],
+      "SwaggerKey": "auth-api"
+    },
+    {
+      "DownstreamPathTemplate": "/api/auth/refresh-token",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/api/auth/refresh-token",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8080
+        }
+      ],
+      "SwaggerKey": "auth-api"
+    },
+    {
+      "DownstreamPathTemplate": "/api/profiles",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/api/profiles",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8082
+        }
+      ],
+      "UpstreamHttpMethod": [ "Post" ],
+      "SwaggerKey": "profile-api"
+    },
+    {
+      "DownstreamPathTemplate": "/api/profiles/{Id}/favorites",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/api/profiles/favorites",
+      "UpstreamHttpMethod": [ "Post" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8082
+        }
+      ],
+      "ChangeDownstreamPathTemplate": {
+        "Id": "Claims[Id] > value > |"
+      },
+      "SwaggerKey": "profile-api"
+    },
+    {
+      "DownstreamPathTemplate": "/api/profiles/{Id}/ratings",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/api/profiles/ratings",
+      "UpstreamHttpMethod": [ "Post" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8082
+        }
+      ],
+      "ChangeDownstreamPathTemplate": {
+        "Id": "Claims[Id] > value > |"
+      },
+      "SwaggerKey": "profile-api"
+    },
+    {
+      "DownstreamPathTemplate": "/api/profiles/{Id}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/api/profiles",
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8082
+        }
+      ],
+      "ChangeDownstreamPathTemplate": {
+        "Id": "Claims[Id] > value > |"
+      },
+      "SwaggerKey": "profile-api"
+    },
+    {
+      "DownstreamPathTemplate": "/api/profiles/{Id}/favorites",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/api/profiles/favorites",
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8082
+        }
+      ],
+      "ChangeDownstreamPathTemplate": {
+        "Id": "Claims[Id] > value > |"
+      },
+      "SwaggerKey": "profile-api"
+    },
+    {
+      "DownstreamPathTemplate": "/api/profiles/{Id}/ratings",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/api/profiles/ratings",
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8082
+        }
+      ],
+      "ChangeDownstreamPathTemplate": {
+        "Id": "Claims[Id] > value > |"
+      },
+      "SwaggerKey": "profile-api"
+    },
+    {
+      "DownstreamPathTemplate": "/api/movies/{id}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/api/movies/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8081
+        }
+      ],
+      "SwaggerKey": "movie-api"
+    },
+    {
+      "DownstreamPathTemplate": "/api/movies",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/api/movies",
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8081
+        }
+      ],
+      "SwaggerKey": "movie-api"
+    },
+    {
+      "DownstreamPathTemplate": "/api/movies/{id}/ratings",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/api/movies/{id}/ratings",
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8081
+        }
+      ],
+      "SwaggerKey": "movie-api"
+    },
+    {
+      "DownstreamPathTemplate": "/api/genres",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/api/genres",
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8081
+        }
+      ],
+      "SwaggerKey": "movie-api"
+    },
+    {
+      "DownstreamPathTemplate": "/api/streaming/{id}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/api/streaming/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8084
+        }
+      ],
+      "SwaggerKey": "streaming-api"
+    },
+    {
+      "DownstreamPathTemplate": "/api/streaming/{id}/{segment}.ts",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/api/streaming/{id}/{segment}.ts",
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8084
+        }
+      ],
+      "SwaggerKey": "streaming-api"
+    },
+    {
+      "DownstreamPathTemplate": "/api/streaming/thumbnails/{id}/{thumbnail}.png",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/api/streaming/thumbnails/{id}/{thumbnail}.png",
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8084
+        }
+      ],
+      "SwaggerKey": "streaming-api"
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "movie-api",
+      "Config": [
+        {
+          "Name": "MovieApp.MovieApi",
+          "Version": "v1",
+          "Url": "http://localhost:8081/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "profile-api",
+      "Config": [
+        {
+          "Name": "MovieApp.ProfileApi",
+          "Version": "v1",
+          "Url": "http://localhost:8082/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ]
+}
