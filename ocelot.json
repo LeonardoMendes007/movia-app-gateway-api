@@ -7,8 +7,8 @@
       "UpstreamHttpMethod": [ "POST" ],
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 8080
+          "Host": "movie-app-auth-api",
+          "Port": 80
         }
       ],
       "SwaggerKey": "auth-api"
@@ -20,8 +20,8 @@
       "UpstreamHttpMethod": [ "POST" ],
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 8080
+          "Host": "movie-app-auth-api",
+          "Port": 80
         }
       ],
       "SwaggerKey": "auth-api"
@@ -33,8 +33,8 @@
       "UpstreamHttpMethod": [ "POST" ],
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 8080
+          "Host": "movie-app-auth-api",
+          "Port": 80
         }
       ],
       "SwaggerKey": "auth-api"
@@ -49,8 +49,8 @@
       },
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 8082
+          "Host": "movie-app-profile-api",
+          "Port": 80
         }
       ],
       "UpstreamHttpMethod": [ "Post" ],
@@ -68,8 +68,8 @@
       },
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 8082
+          "Host": "movie-app-profile-api",
+          "Port": 80
         }
       ],
       "ChangeDownstreamPathTemplate": {
@@ -88,8 +88,8 @@
       },
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 8082
+          "Host": "movie-app-profile-api",
+          "Port": 80
         }
       ],
       "ChangeDownstreamPathTemplate": {
@@ -108,8 +108,8 @@
       },
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 8082
+          "Host": "movie-app-profile-api",
+          "Port": 80
         }
       ],
       "ChangeDownstreamPathTemplate": {
@@ -128,8 +128,8 @@
       },
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 8082
+          "Host": "movie-app-profile-api",
+          "Port": 80
         }
       ],
       "ChangeDownstreamPathTemplate": {
@@ -148,8 +148,8 @@
       },
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 8082
+          "Host": "movie-app-profile-api",
+          "Port": 80
         }
       ],
       "ChangeDownstreamPathTemplate": {
@@ -168,8 +168,8 @@
       },
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 8081
+          "Host": "movie-app-movie-api",
+          "Port": 80
         }
       ],
       "SwaggerKey": "movie-api"
@@ -185,8 +185,8 @@
       },
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 8081
+          "Host": "movie-app-movie-api",
+          "Port": 80
         }
       ],
       "SwaggerKey": "movie-api"
@@ -202,8 +202,8 @@
       },
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 8081
+          "Host": "movie-app-movie-api",
+          "Port": 80
         }
       ],
       "SwaggerKey": "movie-api"
@@ -219,8 +219,8 @@
       },
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 8081
+          "Host": "movie-app-movie-api",
+          "Port": 80
         }
       ],
       "SwaggerKey": "movie-api"
@@ -236,8 +236,8 @@
       },
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 8084
+          "Host": "movie-app-streaming-api",
+          "Port": 80
         }
       ],
       "SwaggerKey": "streaming-api"
@@ -253,8 +253,8 @@
       },
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 8084
+          "Host": "movie-app-streaming-api",
+          "Port": 80
         }
       ],
       "SwaggerKey": "streaming-api"
@@ -270,8 +270,8 @@
       },
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 8084
+          "Host": "movie-app-streaming-api",
+          "Port": 80
         }
       ],
       "SwaggerKey": "streaming-api"
@@ -284,7 +284,7 @@
         {
           "Name": "MovieApp.AuthApi",
           "Version": "v1",
-          "Url": "http://localhost:8080/swagger/v1/swagger.json"
+          "Url": "http://movie-app-auth-api:80/swagger/v1/swagger.json"
         }
       ]
     },
@@ -294,7 +294,7 @@
         {
           "Name": "MovieApp.MovieApi",
           "Version": "v1",
-          "Url": "http://localhost:8081/swagger/v1/swagger.json"
+          "Url": "http://movie-app-movie-api:80/swagger/v1/swagger.json"
         }
       ]
     },
@@ -304,7 +304,7 @@
         {
           "Name": "MovieApp.ProfileApi",
           "Version": "v1",
-          "Url": "http://localhost:8082/swagger/v1/swagger.json"
+          "Url": "http://movie-app-profile-api:80/swagger/v1/swagger.json"
         }
       ]
     },
@@ -314,7 +314,7 @@
         {
           "Name": "MovieApp.StreamingApi",
           "Version": "v1",
-          "Url": "http://localhost:8084/swagger/v1/swagger.json"
+          "Url": "http://movie-app-streaming-api:80/swagger/v1/swagger.json"
         }
       ]
     }

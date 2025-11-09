@@ -1,9 +1,6 @@
-using Microsoft.OpenApi.Models;
 using MovieApp.ApiGateway.DependencyInjection;
 using Ocelot.Middleware;
-using System.Text.Json;
-using System.Text;
-using MovieApp.ApiGateway.OcelotCustomMiddlewares;
+using Microsoft.OpenApi.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

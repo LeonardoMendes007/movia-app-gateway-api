@@ -4,6 +4,7 @@ using MovieApp.ApiGateway.OcelotCustomMiddlewares;
 using MovieApp.AuthApi.API.Config;
 using Ocelot.DependencyInjection;
 using System.Text;
+using Microsoft.OpenApi.Models;
 
 namespace MovieApp.ApiGateway.DependencyInjection;
 
@@ -46,6 +47,18 @@ public static class DependencyInjection
                 .AddDelegatingHandler<AddUserIdHandler>(false);
 
         services.AddSwaggerForOcelot(config);
+
+        services.AddSwaggerGen(option =>
+        {
+            option.SwaggerDoc("v1", new OpenApiInfo { Title = "MovieApp.ApiGateway", Version = "v1" });
+            option.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
+            {
+                Description = "Standard Authorization header using the Bearer scheme. Example: \"bearer {token}\"",
+                In = ParameterLocation.Header,
+                Name = "Authorization",
+                Type = SecuritySchemeType.ApiKey
+            });
+        });
 
         return services;
     }

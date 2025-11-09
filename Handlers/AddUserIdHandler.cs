@@ -18,8 +18,7 @@ public class AddUserIdHandler : DelegatingHandler
     {
         _logger.LogInformation("AddUserIdHandler executing. Request: {method} {uri}", request.Method, request.RequestUri);
 
-        // Só mexer em POST/PUT/PATCH com JSON
-        if (request.Method == HttpMethod.Post || request.Method == HttpMethod.Patch)
+        if (request.Method == HttpMethod.Post)
         {
             if (request.Content != null && request.Content.Headers.ContentType?.MediaType == "application/json")
             {
