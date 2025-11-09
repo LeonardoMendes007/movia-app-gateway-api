@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using MovieApp.ApiGateway.OcelotCustomMiddlewares;
 using MovieApp.AuthApi.API.Config;
 using Ocelot.DependencyInjection;
 using System.Text;
@@ -40,7 +40,11 @@ public static class DependencyInjection
         config
             .AddJsonFile("ocelot.json", optional: false, reloadOnChange: true);
 
-        services.AddOcelot(config);
+        services.AddTransient<AddUserIdHandler>();
+
+        services.AddOcelot(config)
+                .AddDelegatingHandler<AddUserIdHandler>(false);
+
         services.AddSwaggerForOcelot(config);
 
         return services;

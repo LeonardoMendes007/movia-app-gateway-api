@@ -54,6 +54,7 @@
         }
       ],
       "UpstreamHttpMethod": [ "Post" ],
+      "DelegatingHandlers": [ "AddUserIdHandler" ],
       "SwaggerKey": "profile-api"
     },
     {
@@ -278,6 +279,16 @@
   ],
   "SwaggerEndPoints": [
     {
+      "Key": "auth-api",
+      "Config": [
+        {
+          "Name": "MovieApp.AuthApi",
+          "Version": "v1",
+          "Url": "http://localhost:8080/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
       "Key": "movie-api",
       "Config": [
         {
@@ -294,6 +305,16 @@
           "Name": "MovieApp.ProfileApi",
           "Version": "v1",
           "Url": "http://localhost:8082/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "streaming-api",
+      "Config": [
+        {
+          "Name": "MovieApp.StreamingApi",
+          "Version": "v1",
+          "Url": "http://localhost:8084/swagger/v1/swagger.json"
         }
       ]
     }
